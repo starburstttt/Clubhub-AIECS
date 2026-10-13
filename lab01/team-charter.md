@@ -31,4 +31,4 @@ The Product Owner stays the same all semester.
 - Where decisions are recorded: lab01/decisions.md
 
 ## Agreed by
-<!-- each member adds "- Name, date" in their own commit (Task 2) -->
+- Tang Hengly, 2026-10-13
