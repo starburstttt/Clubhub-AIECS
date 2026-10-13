@@ -33,4 +33,4 @@ The Product Owner stays the same all semester.
 ## Agreed by
 - Tang Hengly, 2026-10-13
 - Suonghan Sethaleaph, 2026-10-13
-jkwajdakd
+- Pho Phatsophal, 2026-10-13
