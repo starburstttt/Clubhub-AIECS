@@ -34,4 +34,4 @@ The Product Owner stays the same all semester.
 - Tang Hengly, 2026-10-13
 - Suonghan Sethaleaph, 2026-10-13
 - Pho Phatsophal, 2026-10-13
-- Gugugagaga
+- Cheng Varyroitanak, 2026-10-14
