@@ -21,15 +21,17 @@ The Boeing Company is a US aircraft maker. In its 737 MAX (the 737-8 and 737-9),
 
 
 ## 3. What failed
-<one paragraph>
+Boeing added MCAS, a software system, to the 737 MAX to counter the aircraft's tendency to pitch up. MCAS could activate from the data of a single angle-of-attack (AoA) sensor, so one faulty sensor was enough to trigger it. Boeing left MCAS out of the crew manuals and pilot training, and it underestimated how long pilots would take to respond when it activated. In both the Lion Air (October 2018) and Ethiopian Airlines (March 2019) crashes, faulty AoA data made MCAS push the nose down, and the pilots struggled to counteract it before the aircraft entered a fatal dive.
 
 ```mermaid
 flowchart TD
-  A["root cause"] --> B["..."]
-  B --> C["..."]
-  C --> D["..."]
-  D --> E["impact"]
+  A["MCAS added to counter MAX pitch-up tendency"] --> B["MCAS relies on a single AoA sensor"]
+  B --> C["MCAS omitted from manuals and pilot training"]
+  C --> D["Faulty AoA reading activates MCAS, nose pushed down"]
+  D --> E["Pilots struggle to counteract, fatal dive"]
+  E --> F["Two crashes, 346 deaths, fleet grounded March 2019"]
 ```
+
 
 ## 4. Root causes
 | #  | Root cause                                                   | Type           | Essential difficulty          | Why                                                                                                                                           |
@@ -42,8 +44,14 @@ flowchart TD
 
 
 ## 5. Practices that would have prevented or limited it
-| Root cause | Practice | Chapter |
-|------------|----------|---------|
+| Root cause                                       | Practice                               | Chapter |
+| Root cause                                       | Practice                               | Chapter 
+|A developer accidentally deletes working code     | Version control and reverting commits  | Git/ Version Control chapter
+|A developer introduces a bug into the main project| Pull requests and code reviews         | Collaboration / Code Review chapter
+|Two team members make conflicting changes         | Branching and resolving merge conflicts| Git Branching and Merging chapter
+|Unnecessary files are uploaded to GitHub          | Configure .gitignore                   |Git Repository Management chapter
+|Incorrect code is merged into the main branch     | Run tests before merging               |Software Testing chapter
+|An unauthorized person changes the code           | Repository access permissions and branch protection |GitHub Collaboration/ Security chapter
 
 ## 6. Lessons for ITC Club Hub
 1. **Cross-check critical inputs instead of trusting one source** (from R2, MCAS acting on a single sensor). Club Hub's event registration will compare the stored capacity field with the live count of confirmed attendees before accepting a sign-up. If the two disagree, it rejects the registration and logs an error instead of trusting either value. Our CSV import will also reject any capacity that is not a whole number between 1 and 500.gt
@@ -58,4 +66,8 @@ flowchart TD
 6. Reuters via Deccan Herald, "Indonesia to publish Lion Air crash final report in Nov," 18 Sept 2019, https://www.deccanherald.com/amp/story/world%2Findonesia-to-publish-lion-air-crash-final-report-in-nov-762234.html
 7. Nygard, M. T., Release It!: Design and Deploy Production-Ready Software, 2nd ed., Pragmatic Bookshelf, 2018. [text](https://pragprog.com/titles/mne2/release-it-second-edition/) (primary)
 8. Kleppmann, M., Designing Data-Intensive Applications, O'Reilly Media, 2017. [text](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) (primary)
+
 9. Associated Press. (2025, September 3). Timeline: Key events in the troubled history of the Boeing 737 Max jetliner. FOX 2. https://fox2now.com/news/business/ap-business/ap-timeline-key-events-in-the-troubled-history-of-the-boeing-737-max-jetliner/
+
+10. Aircraft Accident Investigation Bureau of Ethiopia, Aircraft Accident Investigation Report: B737-MAX 8, ET-AVJ, 2022, https://bea.aero:443/fileadmin/user_upload/ET_302__B737-8MAX_ACCIDENT_FINAL_REPORT.pdf (primary)
+
