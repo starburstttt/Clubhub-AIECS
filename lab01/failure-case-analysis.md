@@ -43,4 +43,5 @@ flowchart TD
 2.
 
 ## 7. Sources
-1. <author or organisation, title, year, URL> (primary)
+1. Nygard, M. T., Release It!: Design and Deploy Production-Ready Software, 2nd ed., Pragmatic Bookshelf, 2018. (primary)
+2. Kleppmann, M., Designing Data-Intensive Applications, O'Reilly Media, 2017. (primary)
