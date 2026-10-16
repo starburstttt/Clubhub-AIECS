@@ -14,15 +14,17 @@ The Boeing Company is a US aircraft maker. In its 737 MAX (the 737-8 and 737-9),
 |------|-------|
 
 ## 3. What failed
-<one paragraph>
+Boeing added MCAS, a software system, to the 737 MAX to counter the aircraft's tendency to pitch up. MCAS could activate from the data of a single angle-of-attack (AoA) sensor, so one faulty sensor was enough to trigger it. Boeing left MCAS out of the crew manuals and pilot training, and it underestimated how long pilots would take to respond when it activated. In both the Lion Air (October 2018) and Ethiopian Airlines (March 2019) crashes, faulty AoA data made MCAS push the nose down, and the pilots struggled to counteract it before the aircraft entered a fatal dive.
 
 ```mermaid
 flowchart TD
-  A["root cause"] --> B["..."]
-  B --> C["..."]
-  C --> D["..."]
-  D --> E["impact"]
+  A["MCAS added to counter MAX pitch-up tendency"] --> B["MCAS relies on a single AoA sensor"]
+  B --> C["MCAS omitted from manuals and pilot training"]
+  C --> D["Faulty AoA reading activates MCAS, nose pushed down"]
+  D --> E["Pilots struggle to counteract, fatal dive"]
+  E --> F["Two crashes, 346 deaths, fleet grounded March 2019"]
 ```
+
 
 ## 4. Root causes
 | #  | Root cause                                                   | Type           | Essential difficulty          | Why                                                                                                                                           |
@@ -49,5 +51,6 @@ flowchart TD
 4. Insurance Journal, "House panel concluded after an 18-month investigation," 17 Sept 2020, https://www.insurancejournal.com/news/national/2020/09/17/582821.htm
 5. Australian Transport Safety Bureau, *Collision with terrain involving Boeing 737 MAX 8, PK-LQP, 29 October 2018* (AE-2018-074), https://www.atsb.gov.au/node/10685
 6. Reuters via Deccan Herald, "Indonesia to publish Lion Air crash final report in Nov," 18 Sept 2019, https://www.deccanherald.com/amp/story/world%2Findonesia-to-publish-lion-air-crash-final-report-in-nov-762234.html
-1. Nygard, M. T., Release It!: Design and Deploy Production-Ready Software, 2nd ed., Pragmatic Bookshelf, 2018. [text](https://pragprog.com/titles/mne2/release-it-second-edition/) (primary)
-2. Kleppmann, M., Designing Data-Intensive Applications, O'Reilly Media, 2017. [text](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) (primary)
+7. Nygard, M. T., Release It!: Design and Deploy Production-Ready Software, 2nd ed., Pragmatic Bookshelf, 2018. [text](https://pragprog.com/titles/mne2/release-it-second-edition/) (primary)
+8. Kleppmann, M., Designing Data-Intensive Applications, O'Reilly Media, 2017. [text](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) (primary)
+9. Aircraft Accident Investigation Bureau of Ethiopia, Aircraft Accident Investigation Report: B737-MAX 8, ET-AVJ, 2022, https://bea.aero:443/fileadmin/user_upload/ET_302__B737-8MAX_ACCIDENT_FINAL_REPORT.pdf (primary)
