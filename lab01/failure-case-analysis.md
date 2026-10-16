@@ -44,7 +44,7 @@ flowchart TD
 
 
 ## 5. Practices that would have prevented or limited it
-| Root cause                                       | Practice                               | Chapter |
+
 | Root cause                                       | Practice                               | Chapter 
 |A developer accidentally deletes working code     | Version control and reverting commits  | Git/ Version Control chapter
 |A developer introduces a bug into the main project| Pull requests and code reviews         | Collaboration / Code Review chapter
@@ -52,6 +52,7 @@ flowchart TD
 |Unnecessary files are uploaded to GitHub          | Configure .gitignore                   |Git Repository Management chapter
 |Incorrect code is merged into the main branch     | Run tests before merging               |Software Testing chapter
 |An unauthorized person changes the code           | Repository access permissions and branch protection |GitHub Collaboration/ Security chapter
+
 
 ## 6. Lessons for ITC Club Hub
 1. **Cross-check critical inputs instead of trusting one source** (from R2, MCAS acting on a single sensor). Club Hub's event registration will compare the stored capacity field with the live count of confirmed attendees before accepting a sign-up. If the two disagree, it rejects the registration and logs an error instead of trusting either value. Our CSV import will also reject any capacity that is not a whole number between 1 and 500.gt
