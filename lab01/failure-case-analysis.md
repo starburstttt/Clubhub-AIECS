@@ -44,8 +44,7 @@ flowchart TD
 
 
 ## 5. Practices that would have prevented or limited it
-Root cause / problem|Practice that would have prevented or limited it|Course chapter (example)
-
+| Root cause | Practice |Course chapter |
 Code contains bugs|Unit testing|Chapter 09
 Changes break existing features|Regression testing|Chapter 09
 A faulty update affects everyone|Staged rollout|Chapter 08
