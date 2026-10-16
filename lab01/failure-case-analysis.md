@@ -25,9 +25,14 @@ flowchart TD
 ```
 
 ## 4. Root causes
-| # | Root cause | Type | Essential difficulty | Why |
-|---|------------|------|----------------------|-----|
-| R1 |           | technical / process / organisational | | |
+| #  | Root cause                                                   | Type           | Essential difficulty          | Why                                                                                                                                           |
+|--- |--------------------------------------------------------------|----------------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| R1 | Non-atomic membership quota updates                          | Technical      | Concurrency & Race Conditions | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+| R1 | Missing database indexes on search and foreign key columns   | Technical      | Data Storage Performance      | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+| R1 | Lack of API rate limiting and connection pooling constraints | Process        | Capacity Management           | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+| R1 | Inadequate load testing prior to launch                      | Organisational | Quality Assurance & Testing   | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+
+
 
 ## 5. Practices that would have prevented or limited it
 | Root cause | Practice | Chapter |
