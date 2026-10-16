@@ -25,9 +25,14 @@ flowchart TD
 ```
 
 ## 4. Root causes
-| # | Root cause | Type | Essential difficulty | Why |
-|---|------------|------|----------------------|-----|
-| R1 |           | technical / process / organisational | | |
+| #  | Root cause                                                   | Type           | Essential difficulty          | Why                                                                                                                                           |
+|--- |--------------------------------------------------------------|----------------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| R1 | Non-atomic membership quota updates                          | Technical      | Concurrency & Race Conditions | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+| R1 | Missing database indexes on search and foreign key columns   | Technical      | Data Storage Performance      | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+| R1 | Lack of API rate limiting and connection pooling constraints | Process        | Capacity Management           | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+| R1 | Inadequate load testing prior to launch                      | Organisational | Quality Assurance & Testing   | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+
+
 
 ## 5. Practices that would have prevented or limited it
 | Root cause | Practice | Chapter |
@@ -44,3 +49,5 @@ flowchart TD
 4. Insurance Journal, "House panel concluded after an 18-month investigation," 17 Sept 2020, https://www.insurancejournal.com/news/national/2020/09/17/582821.htm
 5. Australian Transport Safety Bureau, *Collision with terrain involving Boeing 737 MAX 8, PK-LQP, 29 October 2018* (AE-2018-074), https://www.atsb.gov.au/node/10685
 6. Reuters via Deccan Herald, "Indonesia to publish Lion Air crash final report in Nov," 18 Sept 2019, https://www.deccanherald.com/amp/story/world%2Findonesia-to-publish-lion-air-crash-final-report-in-nov-762234.html
+1. Nygard, M. T., Release It!: Design and Deploy Production-Ready Software, 2nd ed., Pragmatic Bookshelf, 2018. [text](https://pragprog.com/titles/mne2/release-it-second-edition/) (primary)
+2. Kleppmann, M., Designing Data-Intensive Applications, O'Reilly Media, 2017. [text](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) (primary)
