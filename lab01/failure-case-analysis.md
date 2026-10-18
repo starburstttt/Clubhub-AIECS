@@ -44,15 +44,14 @@ flowchart TD
 
 
 ## 5. Practices that would have prevented or limited it
-| Root cause | Practice |Course chapter |
-Code contains bugs|Unit testing|Chapter 09
-Changes break existing features|Regression testing|Chapter 09
-A faulty update affects everyone|Staged rollout|Chapter 08
-Developers overwrite each other's work|Git branches and code reviews|Version Control / Collaboration
-Code is merged without checking|Pull requests and mandatory reviews|Software Quality / Code Review
-A program uses too much CPU|Performance testing and resource limits|Performance Engineering
-A problem is discovered too late|Continuous integration (CI)|DevOps / Continuous Integration
-No way to recover after a failed update|Backups and rollback procedures|Reliability Engineering
+
+| Root cause                                       | Practice                               | Chapter 
+|A developer accidentally deletes working code     | Version control and reverting commits  | Git/ Version Control chapter
+|A developer introduces a bug into the main project| Pull requests and code reviews         | Collaboration / Code Review chapter
+|Two team members make conflicting changes         | Branching and resolving merge conflicts| Git Branching and Merging chapter
+|Unnecessary files are uploaded to GitHub          | Configure .gitignore                   |Git Repository Management chapter
+|Incorrect code is merged into the main branch     | Run tests before merging               |Software Testing chapter
+|An unauthorized person changes the code           | Repository access permissions and branch protection |GitHub Collaboration/ Security chapter
 
 
 
