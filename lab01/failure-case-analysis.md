@@ -51,6 +51,7 @@ flowchart TD
 
 ## 5. Practices that would have prevented or limited it
 
+
 | Root cause                                         | Practice                                            | Chapter                             |
 |----------------------------------------------------|-----------------------------------------------------|-------------------------------------|
 | A developer accidentally deletes working code      | Version control and reverting commits               | Git / Version Control               |
@@ -59,6 +60,9 @@ flowchart TD
 | Unnecessary files are uploaded to GitHub           | Configure `.gitignore`                              | Git Repository Management           |
 | Incorrect code is merged into the main branch      | Run tests before merging                            | Software Testing                    |
 | An unauthorized person changes the code            | Repository access permissions and branch protection | GitHub Collaboration / Security     |
+
+
+
 
 ## 6. Lessons for ITC Club Hub
 
