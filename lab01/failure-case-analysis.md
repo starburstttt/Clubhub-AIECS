@@ -42,24 +42,21 @@ flowchart TD
 
 ## 4. Root causes
 
-| #  | Root cause                                                   | Type           | Essential difficulty          | Why                                                                                                                                           |
-|----|--------------------------------------------------------------|----------------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| R1 | Non-atomic membership quota updates                          | Technical      | Concurrency & Race Conditions | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
-| R2 | Missing database indexes on search and foreign key columns   | Technical      | Data Storage Performance      | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
-| R3 | Lack of API rate limiting and connection pooling constraints | Process        | Capacity Management           | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
-| R4 | Inadequate load testing prior to launch                      | Organisational | Quality Assurance & Testing   | Read-then-write operations were performed without row-level locks or transactional isolation, allowing double-bookings under concurrent load. |
+| #  | Root cause                                                                     | Type           | Essential difficulty | Why |
+|----|--------------------------------------------------------------------------------|----------------|----------------------|-----|
+| R1 | MCAS could act on one angle-of-attack sensor with no cross-check               | Technical      | Complexity           | A safety-critical command depended on a single input, so one faulty sensor was enough to trigger it. |
+| R2 | MCAS was left out of crew manuals and pilot training                           | Organisational | Invisibility         | Pilots could not understand or handle behaviour of a function they did not know existed. |
+| R3 | MCAS was made stronger during development without re-checking the safety analysis | Process     | Changeability        | The requirement changed but the assessment of its risk was not updated to match. |
+| R4 | The MAX had to handle like older 737s so pilots needed no new simulator training | Organisational | Conformity         | Commercial pressure to match an existing aircraft type shaped how the software was designed and disclosed. |
 
 ## 5. Practices that would have prevented or limited it
 
-| Root cause                                         | Practice                                            | Chapter                             |
-|----------------------------------------------------|-----------------------------------------------------|-------------------------------------|
-| A developer accidentally deletes working code      | Version control and reverting commits               | Git / Version Control               |
-| A developer introduces a bug into the main project | Pull requests and code reviews                      | Collaboration / Code Review         |
-| Two team members make conflicting changes          | Branching and resolving merge conflicts             | Git Branching and Merging           |
-| Unnecessary files are uploaded to GitHub           | Configure `.gitignore`                              | Git Repository Management           |
-| Incorrect code is merged into the main branch      | Run tests before merging                            | Software Testing                    |
-| An unauthorized person changes the code            | Repository access permissions and branch protection | GitHub Collaboration / Security     |
-
+| Root cause | Practice                                                           | Chapter    |
+|------------|--------------------------------------------------------------------|------------|
+| R1         | Cross-check redundant inputs; tests that feed faulty sensor values | Chapter 09 |
+| R2         | Document automatic behaviour for its users; acceptance tests       | Chapter 05 |
+| R3         | Re-validate the safety analysis after every requirement change     | Chapter 05 |
+| R4         | Independent review of design decisions made under schedule pressure | Chapter 08 |
 ## 6. Lessons for ITC Club Hub
 
 1. **Cross-check critical inputs instead of trusting one source** (from R2, MCAS acting on a single sensor). Club Hub's event registration will compare the stored capacity field with the live count of confirmed attendees before accepting a sign-up. If the two disagree, it rejects the registration and logs an error instead of trusting either value. Our CSV import will also reject any capacity that is not a whole number between 1 and 500.
