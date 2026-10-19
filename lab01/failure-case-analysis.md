@@ -57,6 +57,7 @@ flowchart TD
 | R2         | Document automatic behaviour for its users; acceptance tests       | Chapter 05 |
 | R3         | Re-validate the safety analysis after every requirement change     | Chapter 05 |
 | R4         | Independent review of design decisions made under schedule pressure | Chapter 08 |
+
 ## 6. Lessons for ITC Club Hub
 
 1. **Cross-check critical inputs instead of trusting one source** (from R2, MCAS acting on a single sensor). Club Hub's event registration will compare the stored capacity field with the live count of confirmed attendees before accepting a sign-up. If the two disagree, it rejects the registration and logs an error instead of trusting either value. Our CSV import will also reject any capacity that is not a whole number between 1 and 500.
