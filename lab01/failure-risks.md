@@ -1,3 +1,4 @@
+
 # Failure risks · ITC Club Hub (v0.1, 2026-10-20)
 
 | #  | How the project could fail | Chapter 01 topic | Early warning sign | First countermeasure | Owner |
@@ -7,3 +8,5 @@
 | F3 | The client asks for the waiting list or recurring events in week 11, after the data model was fixed in Sprint 1 | Changing requirements and cost of change | One new requirement forces edits in more than three files | Keep events and registrations as separate types; confirm Should features with the client at each sprint start | CHENG Varyroitanak |
 | F4 | A member list exported from a spreadsheet, with real e-mails and phone numbers, is committed as test data | Reliability, security and safety | A data file shows up in `git status` | Only invented test data in the repo; `data/` listed in `.gitignore`; review every CSV in pull requests | YEN Chhavorn |
 | F5 | In the Sprint 2 demo the command-line program, the stored CSV files and the web and mobile models do not match, and the build only worked on one laptop | Legacy, integration and technical debt | "Works on my machine" comments; TODOs pile up in the code | Build from a fresh clone at the end of every lab; keep a short debt list in the README | TANG Hengly |
+
+
