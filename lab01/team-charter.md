@@ -14,18 +14,18 @@ Scrum Master rotation: Sprint 1 = Pho Phatsophal, Sprint 2 = Tang Hengly.
 The Product Owner stays the same all semester.
 
 ## Working agreements
-
-1. TODO (checkable: a time, a number or an observable action)
+TODO (checkable: a time, a number or an observable action)
+1. ...
 2. ...
 
 ## Communication channels
 
-| Purpose    | Channel         | Expected response |
-|------------|-----------------|-------------------|
-| Chat       | Telegram        |                   |
-| Work items | GitHub Issues   |                   |
-| Files      | this repository | n/a               |
-| Meetings   |                 |                   |
+| Purpose    | Channel           | Expected response |
+|------------|-------------------|-------------------|
+| Chat       | Telegram          |                   |
+| Work items | GitHub Issues     |                   |
+| Files      | this repository   | n/a               |
+| Meetings   | A401, Common Room |                   |
 
 ## Decision rules
 
