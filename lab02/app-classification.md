@@ -1,5 +1,5 @@
 # Lab-02 · Classification of five applications
-Version 1.0 · 2026-10-23 · Team: KO Preii
+Version 1.0 · 2026-10-23 · Team: KO Preiii
 
 | # | Application | Kind | Type(s) | Where the code runs, how it is delivered | Architecture | Top 3 qualities (why) | Filled by |
 |---|-------------|------|---------|------------------------------------------|--------------|-----------------------|-----------|
